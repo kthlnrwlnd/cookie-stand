@@ -26,7 +26,6 @@ var alki = {
   maxCustomer: 16,
   aveCookiePerCustomer: 4.6, 
   var: randomNumber = Math.floor(Math.random) * (this.maxCustomer) + (this.minCustomer),
-  return randomNumber;
 }
   
 console.log(randomNumber);
