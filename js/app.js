@@ -125,10 +125,10 @@ var capitolHill = {
       listRow.textContent = hours[i] + ': ' + this.hourlySales [i] + '  cookies';
       this.dailyTotal += this.hourlySales[i];
       capitolHillContainer.appendChild(listRow);
-      var total = document.createElement('li');
-      total.textContent = 'Total: ' + this.dailyTotal;
-      capitolHillContainer.appendChild(total);
     }
+    var total = document.createElement('li');
+    total.textContent = 'Total: ' + this.dailyTotal;
+    capitolHillContainer.appendChild(total);
   }
 };
 
