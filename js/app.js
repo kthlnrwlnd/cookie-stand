@@ -69,6 +69,8 @@ var seaTacAirport = {
 
 seaTacAirport.generateSalesData();
 seaTacAirport.render();
+// start constructor function here
+
 
 
 var seattleCenter = {
