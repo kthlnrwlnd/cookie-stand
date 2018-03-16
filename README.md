@@ -1,5 +1,9 @@
 # cookie-stand
 week 2 project
+
+I COULD NOT HAVE DONE ANY OF THIS CODE WITHOUT THE GUIDANCE OF THE CODE FELLOWS INSTRUCTIONAL STAFF COHORT 201D33
+
+
 # Project Title
 
 One Paragraph of project description goes here
@@ -87,3 +91,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
+ 
