@@ -2,11 +2,8 @@
 
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var cookieTableContainer = document.getElementById('cookie');
-// var seattleCenterContainer = document.getElementById('seattle-center');
-// var capitolHillContainer = document.getElementById('capitol-hill');
-// var alkiContainer = document.getElementById('alki');
-
 var storeArray =[];
+
 // constructor function
 var StoreLocation = function (storeLocation, minCustomer, maxCustomer, aveCookiePerCustomer) {
   this.locationName = storeLocation;
@@ -16,7 +13,52 @@ var StoreLocation = function (storeLocation, minCustomer, maxCustomer, aveCookie
   this.hourlySales = [];
   storeArray.push(this);
 };
+// render store locations in the table
+StoreLocation.prototype.render = function () {
+  var trElement = document.createElement('tr');
 
+  var tdElement = document.createElement('td');
+  tdElement.textContent = this.locationName;
+  trElement.appendChild(tdElement);
+
+  tdElement = document.createElement('td');
+  tdElement.textContent = this.minCustomer;
+  trElement.appendChild(tdElement);
+
+  tdElement = document.createElement('td');
+  tdElement.textContent = this.maxCustomer;
+  trElement.appendChild(tdElement);
+
+  tdElement = document.createElement('td');
+  tdElement.textContent = this.aveCookiePerCustomer;
+  trElement.appendChild(tdElement);
+
+  cookieTableContainer.appendchild(trElement);
+};
+
+// Make the table header
+function makeHeaderRow() {
+  var headerTrElement = document.createElement('tr');
+  var thElement = document.createElement('th');
+  HTMLHRElement.textContent = 'locationName';
+  headerTrElement.appendChild(thElement);
+
+  thElement = document.createElement('th');
+  thElement.textContent = 'minCustomer';
+  headerTrElement.appendChild(thElement);
+
+  thElement = document.createElement('th');
+  thElement.textContent = 'maxCustomer';
+  headerTrElement.appendChild(thElement);
+
+  thElement = document.createElement('th');
+  thElement.textContent = 'aveCookiePerCustomer';
+  cookieTableContainer.appendChild(headerTrElement);
+
+  // cookieTableContainer.innerHTML = '';
+  // makeHeaderRow();
+  // renderStoreLocation();
+}
 StoreLocation.prototype.randomNumber = function() {
   return Math.floor(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
 };
@@ -67,6 +109,7 @@ function renderStoreLocation() {
     storeArray[i].render();
   }
 }
+makeHeaderRow();
 renderStoreLocation();
 
 
